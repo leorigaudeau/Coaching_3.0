@@ -1,0 +1,7 @@
+{
+  "name": "actincoach",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
