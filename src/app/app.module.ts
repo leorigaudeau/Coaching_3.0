@@ -1,16 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, Form } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {AccueilPage} from '../pages/accueil/accueil';
+import { ProfilPage } from '../pages/profil/profil';
+import { ReglesPage } from '../pages/regles/regles';
+import { NotationPage } from '../pages/notation/notation';
+import { SoftMajeursPage } from '../pages/soft-majeurs/soft-majeurs';
+import { SoftMineursPage } from '../pages/soft-mineurs/soft-mineurs';
+import { SwitchPage } from '../pages/switch/switch';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AccueilPage,
+    ProfilPage,
+    ReglesPage,
+    NotationPage,
+    SoftMajeursPage,
+    SoftMineursPage,
+    SwitchPage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +33,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AccueilPage,
+    ProfilPage,
+    ReglesPage,
+    NotationPage,
+    SoftMajeursPage,
+    SoftMineursPage,
+    SwitchPage
   ],
   providers: [
     StatusBar,
