@@ -14,8 +14,8 @@ page-regles {
             padding: 15px;
             border: 0px solid;
             border-radius: 20px;
-            background-color: #ED7305;
-            color: white;
+            background-color:color($colors,primary,base);
+            color: color($colors,light,base);
             font-size: 1rem;
         }
     }

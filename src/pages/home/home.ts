@@ -17,9 +17,11 @@ export class HomePage {
 
   }
   accueilPage =AccueilPage;
+  
   GoOnToProfil(){
     this.navCtrl.push(ProfilPage);
   }
+  
   reglesPage=ReglesPage;
   notationPage=NotationPage;
   softMajeursPage=SoftMajeursPage;
