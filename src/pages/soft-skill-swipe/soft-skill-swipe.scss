@@ -1,3 +1,29 @@
 page-soft-skill-swipe {
-
+    .card-container {
+        width: 100%;
+        height: 70%;
+    }
+sc-card {
+    width: 70% !important;
+}
+    .content-btns {
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        margin-top: 10% !important;
+        .button {
+            width: 45%;
+            border-radius: 50px;
+            border-color: #ed7305;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+        }
+        #oui {
+        }
+        #non {
+        }
+    }
 }
