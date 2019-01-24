@@ -1,1 +1,26 @@
+<<<<<<< HEAD
 /* No CSS */
+=======
+.content-btns {
+  width: 100%;
+  text-align: center;
+}
+
+.content-btns .button {
+  height: 80px;
+  width: 45%;
+  border-radius: 50px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin-top: 130%;
+}
+
+.skill-content {
+  width: 100%;
+  border: 1px;
+}
+/*# sourceMappingURL=switch.css.map */
+>>>>>>> f9d4cbbe2ad373035b766f4adcedc726adc85931

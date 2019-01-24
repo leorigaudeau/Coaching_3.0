@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SwitchPage } from '../switch/switch';
 
 /**
  * Generated class for the ReglesPage page.
@@ -16,6 +17,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReglesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+  GoOnToSwitch(){
+    this.navCtrl.push(SwitchPage);
   }
 
   ionViewDidLoad() {

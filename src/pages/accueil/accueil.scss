@@ -12,11 +12,13 @@ page-accueil {
 
     .contentinputs {
         width: 100%;
+        margin-top: 5%;
+        height: 15%;
         text-align: center;
         input {
-            width: 80%;
-            height: 40px;
-            margin: 28px;
+            width: 75%;
+            margin: 7%;
+            padding: 15px;
             box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
             border: 1px solid color($colors, primary, base);
         }
@@ -25,6 +27,7 @@ page-accueil {
     .contentbtn {
         width: 100%;
         text-align: center;
+        height: 30%;
         .button {
             background-color: color($colors, primary, base);
             border-radius: 20px;
@@ -34,7 +37,7 @@ page-accueil {
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-top: 5%;
+            margin-top: 40%;
         }
     }
 }

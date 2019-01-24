@@ -1,3 +1,59 @@
 page-switch {
 
 }
+
+.content-btns {
+    width: 100%;
+    text-align: center;
+    .button {
+        height: 80px;
+        width: 45%;
+        border-radius: 50px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        margin-top: 130%;
+    }
+    #oui{
+
+    }
+    #non{
+
+    }
+
+}
+
+
+.skill-content {
+  
+    background-color: black;
+    height: 75%;
+
+.content-btns {
+    
+    text-align: center;
+    .button {
+        width: 45%;
+        border-radius: 50px;
+        border-color:color ($color primary base);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        
+    }
+    #oui{
+
+    }
+    #non{
+
+    }
+
+}
+
+
+
+}
