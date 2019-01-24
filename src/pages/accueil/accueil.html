@@ -7,12 +7,32 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>accueil</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="contentimg">
+        <img src="../../assets/imgs/logo.png" class="logo">
+    </div>
 
+  <ion-list>
+
+    <ion-item class="contentinputs">
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
+    </ion-item>
+  
+    <ion-item class="contentbtn">
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password"  type="password" value=""></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button primary block  (click)="login()">Sign In</button>
+  </div>
 </ion-content>

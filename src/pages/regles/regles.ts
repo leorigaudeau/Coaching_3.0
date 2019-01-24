@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-
+import {SoftSkillSwipePage} from '../soft-skill-swipe/soft-skill-swipe'
 /**
- * Generated class for the AccueilPage page.
+ * Generated class for the ReglesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,23 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-accueil',
-  templateUrl: 'accueil.html',
+  selector: 'page-regles',
+  templateUrl: 'regles.html',
 })
-export class AccueilPage {
-
-  username:string;
-  password:string;
+export class ReglesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AccueilPage');
+  GoOnToSwitch(){
+    this.navCtrl.push(SoftSkillSwipePage);
   }
 
-  login(){
-    this.navCtrl.push('SoftSkillSwipePage');
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ReglesPage');
   }
 
 }
