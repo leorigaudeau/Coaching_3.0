@@ -1,3 +1,30 @@
 page-soft-majeurs {
+    ion-col{
+        text-align: center;
+    }
 
+    .titlepage{
+        width: 100%;
+        color: color($colors, secondary, base);
+        font-size: 2rem;
+        text-align: center;
+        
+    }
+    .casenote{
+        width: 19px;
+        height: 19px;
+        border-radius: 25px;
+        background: color($colors, primary, base);
+    }
+    .casevide{
+        width: 19px;
+        height: 19px;
+        border-radius: 25px;
+        background: color($colors, light, base);
+        border: 1px solid color($colors,primary,base);
+    }
+    .checkboxstyle{
+        margin-top: 15px;
+    }
+   
 }

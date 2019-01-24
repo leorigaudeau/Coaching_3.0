@@ -7,29 +7,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>soft-majeurs</ion-title>
+    <ion-title>Fin du jeu</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
 
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Sausage</ion-label>
-      <ion-checkbox [(ngModel)]="sausage" disabled="true"></ion-checkbox>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Mushrooms</ion-label>
-      <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
-    </ion-item>
-  
-  </ion-list>
+  <p class="titlepage">
+    Liste des 5 compétences à choisir:
+  </p>
+  <button ion-button (click)="setnote()">set</button>
+  <ion-grid>
+    <ion-row *ngFor="let element of list" >
+      <ion-col class="titlepage-name" col-4>
+        <p class="intitule">{{element.name}}</p>
+      </ion-col>
+      <ion-col class="titlepage-note" col-6>
+        <ion-grid>
+          <ion-row *ngFor="let elementid of list">
+            <div *ngIf="elementid.note <= "
+              <ion-col><div class='casevide'></div></ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-list>
+      <ion-col class="titlepage-check" col-2>
+        <ion-checkbox [(ngModel)]="element.coche"  (ionChange)="updateSoftskill()" class="checkboxstyle"></ion-checkbox>
+      </ion-col>
+    </ion-list>
+    </ion-row>
+    
+  </ion-grid>
 </ion-content>
