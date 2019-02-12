@@ -1,14 +1,16 @@
 page-soft-skill-swipe {
-    .card-container {
-        width: 100%;
-        height: 70%;
+    .first{
+        width: 30%;
+        height: 40%;
+        background-color: red;
     }
-sc-card {
-    width: 70% !important;
-}
-    .content-btns {
-        width: 100%;
-        height: 30%;
+    .card-container {
+        width: 100% !important;
+        height: 70% !important;
+    }
+ .content-btns {
+        width: 100% !important;
+        height: 30% !important;
         text-align: center;
         margin-top: 10% !important;
         .button {
@@ -22,6 +24,8 @@ sc-card {
             font-size: 25px;
         }
         #oui {
+            width: 30% !important;
+            margin-top: 5% !important;
         }
         #non {
         }
