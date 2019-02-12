@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 667">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-iPhone_6_7_8_7);
+      }
+
+      .cls-2 {
+        opacity: 0.42;
+      }
+
+      .cls-3 {
+        fill: rgba(237,115,5,0);
+        stroke: #1c2957;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #707070;
+        opacity: 0.66;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-iPhone_6_7_8_7">
+      <rect width="375" height="667"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_6_7_8_7" data-name="iPhone 6/7/8 – 7" class="cls-1">
+    <rect class="cls-7" width="375" height="667"/>
+    <g id="Groupe_107" data-name="Groupe 107" class="cls-2">
+      <g id="Groupe_26" data-name="Groupe 26">
+        <g id="Groupe_20" data-name="Groupe 20" transform="translate(-556 -591)">
+          <path id="Tracé_80" data-name="Tracé 80" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(886.64 614.5)"/>
+          <path id="Tracé_82" data-name="Tracé 82" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(606.425 614.5)"/>
+          <path id="Tracé_84" data-name="Tracé 84" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(41.4 614.5)"/>
+          <path id="Tracé_83" data-name="Tracé 83" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(321.615 614.5)"/>
+          <path id="Tracé_81" data-name="Tracé 81" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(1166.856 614.5)"/>
+        </g>
+        <g id="Groupe_22" data-name="Groupe 22" transform="translate(-547.608 1312.408) rotate(-90)">
+          <path id="Tracé_80-2" data-name="Tracé 80" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(886.64 614.5)"/>
+          <path id="Tracé_82-2" data-name="Tracé 82" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(606.425 614.5)"/>
+          <path id="Tracé_84-2" data-name="Tracé 84" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(41.4 614.5)"/>
+          <path id="Tracé_83-2" data-name="Tracé 83" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(321.615 614.5)"/>
+          <path id="Tracé_81-2" data-name="Tracé 81" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(1166.856 614.5)"/>
+        </g>
+        <g id="Groupe_21" data-name="Groupe 21" transform="translate(-556 -189)">
+          <path id="Tracé_80-3" data-name="Tracé 80" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(886.64 614.5)"/>
+          <path id="Tracé_82-3" data-name="Tracé 82" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(606.425 614.5)"/>
+          <path id="Tracé_84-3" data-name="Tracé 84" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(41.4 614.5)"/>
+          <path id="Tracé_83-3" data-name="Tracé 83" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(321.615 614.5)"/>
+          <path id="Tracé_81-3" data-name="Tracé 81" class="cls-3" d="M209.358.5H70.186L.6,121.078,70.186,241.516H209.358l69.586-120.438Z" transform="translate(1166.856 614.5)"/>
+        </g>
+      </g>
+      <g id="Rectangle_8" data-name="Rectangle 8" class="cls-4">
+        <rect class="cls-5" width="375" height="667"/>
+        <rect class="cls-6" x="0.5" y="0.5" width="374" height="666"/>
+      </g>
+    </g>
+  </g>
+</svg>
