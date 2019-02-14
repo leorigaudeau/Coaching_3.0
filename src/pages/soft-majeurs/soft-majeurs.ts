@@ -35,8 +35,8 @@ export class SoftMajeursPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SoftMajeursPage');
   }
+
   
-   
   updateSoftskill(){
     this.list.forEach(element => {
       console.log("event"+element.name+" " +element.coche)

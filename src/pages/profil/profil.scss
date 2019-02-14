@@ -3,18 +3,25 @@ page-profil {
         text-align:center
     }
     .home-informations{
+        h2{
+            border-bottom:1px solid color($colors,primary,base);
+        }
         
     }
     .home-mise-en-valeur{
+        
         .home-valeur-box{
             border: 1px solid color($colors,primary,base);
             border-radius: 20px;
+            padding-left: 20px;
         }
     }
     .home-progresser{
+        
         .home-progresser-box{
             border: 1px solid color($colors,primary,base);
             border-radius: 20px;
+            padding-left: 20px;
         }
     }
 
