@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
 
 /**
@@ -19,7 +20,7 @@ export class AccueilPage {
   username:string;
   password:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
   }
 
   ionViewDidLoad() {
@@ -27,7 +28,12 @@ export class AccueilPage {
   }
 
   login(){
-    this.navCtrl.push('SoftSkillSwipePage');
+    var test={"login":this.username,"password":this.password}
+    console.log(test)
+    this.http.post('https://actincoachapi.herokuapp.com/login',test).subscribe(res=>{
+      console.log(res)
+      this.navCtrl.push('SoftSkillSwipePage');
+    });
   }
 
 }

@@ -15,14 +15,18 @@
 
 <ion-content padding>
     <div class="card-container" *ngIf="ready">
-        <sc-card padding
+        <sc-card padding class="card"
                  *ngFor="let attendant of attendants"
                  [orientation]="cardDirection"
                  [tinder-card]="cardOverlay"
                  [callDestroy]="attendant.destroyEvent"
                  [callLike]="attendant.likeEvent"
+                 [ngClass]="['first']"
                  (onLike)="onCardInteract($event,attendant)">
             <div class="user_img" [style.background-image]="attendant.asBg">{{attendant.id}}</div>
         </sc-card>
+    </div>
+    <div>
+      <button></button>
     </div>
 </ion-content>

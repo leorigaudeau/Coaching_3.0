@@ -17,8 +17,9 @@ export class SoftSkillSwipePage {
   attendants = [];
   cardDirection = "xy";
   cardOverlay: any = {
+    color:'#28e93b',
       like: {
-          backgroundColor: '#28e93b'
+          backgroundColor: '#28e93b',
       },
       dislike: {
           backgroundColor: '#e92828'
