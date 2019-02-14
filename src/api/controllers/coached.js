@@ -25,7 +25,7 @@ exports.getSkillsByUserId = (req, response) =>{
 exports.getSoftSkills = (req, response) =>{
     pool.connect().then(client=>{
         client.query('SELECT * FROM softskill').then((res) => {
-            response.json(res.rows[0])
+            response.json(res.rows)
             client.end()
           })
     })
