@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SoftMajeursPage {
 
-  list: Array<Object>= [
+  list= [
     { name: "HTML5", note: 1,coche: false },
     { name: "JavaScript", note: 2,coche: false },
     { name: "Css", note: 3,coche: false },
