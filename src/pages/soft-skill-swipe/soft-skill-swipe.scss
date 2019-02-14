@@ -18,10 +18,12 @@ page-soft-skill-swipe {
     justify-content: center !important;
     text-align: center !important;
     font-size: 25px;
+    vertical-align: middle !important;
     }
 .card-container {
+    margin-top: 15% !important;
     width: 100% !important;
-    height:60% !important;
+    height:65% !important;
     text-align: center !important;
     
     }
@@ -33,10 +35,15 @@ page-soft-skill-swipe {
     border-color: color($colors, primary, base) !important;
     margin-left: 6% !important;
 }
+.imgicon {
+    width: 45% !important;
+    height: 35% !important;
+}
 .content-btns {
     width: 100% !important;
     height: 20% !important;
     text-align: center !important;
+    
     
     .button {
         width: 45%;

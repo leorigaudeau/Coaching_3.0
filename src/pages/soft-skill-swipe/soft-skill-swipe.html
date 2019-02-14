@@ -31,7 +31,12 @@
                  [ngClass]="['first']"
                  
                  (onLike)="onCardInteract($event,attendant)">
-            <div class="user_img" [style.background-image]="attendant.asBg">{{attendant.id}}</div>
+            
+            <img src ="../../assets/icon/faqs.png" class ="imgicon">
+            <p> {{attendant.id}}
+              <br> 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo dicta, quia accusamus mollitia nesciunt itaque commodi enim, officiis nam error molestiae, earum obcaecati quis rem iure voluptatem repudiandae beatae vel.
+            </p>
         </sc-card>
         
     </div>
