@@ -18,26 +18,42 @@
   <p class="titlepage">
     Liste des 5 compétences à choisir:
   </p>
-  <button ion-button (click)="setnote()">set</button>
-  <ion-grid>
-    <ion-row *ngFor="let element of list" >
+  <ion-grid class="gridsoftskill">
+    <ion-row *ngFor="let element of list">
       <ion-col class="titlepage-name" col-4>
         <p class="intitule">{{element.name}}</p>
       </ion-col>
       <ion-col class="titlepage-note" col-6>
         <ion-grid>
-          <!-- <ion-row *ngFor="let elementid of list"> -->
-            <!-- <div *ngIf="elementid.note <= "
-              <ion-col><div class='casevide'></div></ion-col>
-          </ion-row> -->
+          <ion-row>
+            <div class="casecontent" *ngFor="let index of [1,2,3,4,5]; ">
+              <div *ngIf="element.note <=index; else elseelement">
+                <div class='casevide'></div>
+              </div>
+              <div class="casecontent">
+                <ng-template #elseelement>
+                  <div class='casenote'></div>
+                </ng-template>
+              </div>
+            </div>
+          </ion-row>
         </ion-grid>
       </ion-col>
       <ion-list>
-      <ion-col class="titlepage-check" col-2>
-        <ion-checkbox [(ngModel)]="element.coche"  (ionChange)="updateSoftskill()" class="checkboxstyle"></ion-checkbox>
-      </ion-col>
-    </ion-list>
+        <ion-col class="titlepage-check" col-2>
+          <ion-checkbox [(ngModel)]="element.coche" (ionChange)="updateSoftskill()" class="checkboxstyle"></ion-checkbox>
+        </ion-col>
+      </ion-list>
     </ion-row>
-    
+  </ion-grid>
+  <ion-grid class="gridbutton">
+    <ion-row>
+      <ion-col>
+        <button class="btn-retour"><ion-icon name="arrow-round-back"></ion-icon> Retour</button>
+      </ion-col>
+      <ion-col>
+        <button class="btn-suite">Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

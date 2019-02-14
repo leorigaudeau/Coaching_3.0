@@ -19,6 +19,13 @@ export class SoftMajeursPage {
     { name: "HTML5", note: 1,coche: false },
     { name: "JavaScript", note: 2,coche: false },
     { name: "Css", note: 3,coche: false },
+    { name: "Git", note: 4 ,coche: false},
+    { name: "HTML5", note: 1,coche: false },
+    { name: "JavaScript", note: 2,coche: false },
+    { name: "Css", note: 3,coche: false },
+    { name: "Git", note: 4 ,coche: false}, { name: "HTML5", note: 1,coche: false },
+    { name: "JavaScript", note: 2,coche: false },
+    { name: "Css", note: 3,coche: false },
     { name: "Git", note: 4 ,coche: false}
   ];
 
@@ -27,19 +34,6 @@ export class SoftMajeursPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SoftMajeursPage');
-  }
-
-  setnote(){
-    this.list.forEach(element => {
-      for (var index = 1; index <= 5; index++) {
-        if (index<=element.note) {
-          document.getElementById(String(index)).className='casenote';
-        }
-        console.log(this.list[index].note);
-        
-      }
-    });
-    
   }
   
    
