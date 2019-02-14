@@ -50,10 +50,10 @@ export class SoftMajeursPage {
     
   }
 
-  onModelChange(event){
-    this.rate = event;
-    console.log(event);
-  };
+  // onModelChange(event){
+  //   this.rate = event;
+  //   console.log(event);
+  // };
 
   
   
