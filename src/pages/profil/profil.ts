@@ -14,12 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
-
+list = [
+    { name:"SoftSkill 1", note:1},
+    { name:"SoftSkill 2", note:2},
+    { name:"SoftSkill 3", note:3},
+    { name:"SoftSkill 4", note:4},
+  ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilPage');
   }
+
+  
 
 }

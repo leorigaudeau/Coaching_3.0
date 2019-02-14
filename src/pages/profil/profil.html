@@ -19,10 +19,17 @@
 
   <div class="home-informations">
 
-    <ion-item>
-      <ion-input placeholder="Prénom"></ion-input>
-      <ion-input placeholder="Nom"></ion-input>
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col><h2>Prénom</h2></ion-col>
+        <ion-col><h2>Nom</h2></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    
+
+
+
 
   </div>
 
@@ -49,13 +56,15 @@
 
     <h2>Mise en valeur</h2>
 
-    <div class="home-valeur-box">
+    <div class="home-valeur-box" >
 
-      <p>Stat 1 </p>
+      <div *ngFor="let element of list">
+          <p>
+              {{element.name}}: {{element.note}}
+          </p>
+      </div>
 
-      <p>Stat 2 </p>
-
-      <p>Stat 3 </p>
+ 
 
     </div>
 
@@ -65,13 +74,13 @@
 
     <h2>Progresser</h2>
 
-    <div class="home-progresser-box">
-
-      <p>Stat 1 </p>
-
-      <p>Stat 2 </p>
-
-      <p>Stat 3 </p>
+    <div class="home-progresser-box" >
+  
+        <div *ngFor="let element of list">
+            <p>
+                {{element.name}}: {{element.note}}
+            </p>
+        </div>
 
     </div>
 

@@ -20,7 +20,7 @@ export class HomePage {
   accueilPage =AccueilPage;
   
   GoOnToProfil(){
-    this.navCtrl.push(ProfilPage);
+    this.navCtrl.push('ProfilPage');
   }
 
   GoOnToAcceuil(){

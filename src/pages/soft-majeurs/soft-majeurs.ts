@@ -29,20 +29,7 @@ export class SoftMajeursPage {
     console.log('ionViewDidLoad SoftMajeursPage');
   }
 
-  setnote(){
-    this.list.forEach(element => {
-      for (var index = 1; index <= 5; index++) {
-        if (index<=element.note) {
-          document.getElementById(String(index)).className='casenote';
-        }
-        console.log(this.list[index].note);
-        
-      }
-    });
-    
-  }
   
-   
   updateSoftskill(){
     this.list.forEach(element => {
       console.log("event"+element.name+" " +element.coche)
