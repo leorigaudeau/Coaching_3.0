@@ -14,21 +14,32 @@
 
 
 <ion-content padding>
-    <div class="card-container" *ngIf="ready">
+  
+  
+      <ion-row class ="containertitle1">
+      <h1 class ="title1">SoftSkills</h1>
+  
+  </ion-row>
+  <ion-row class="card-container" *ngIf="ready">
+    <div>
         <sc-card padding
                  *ngFor="let attendant of attendants"
                  [orientation]="cardDirection"
                  [tinder-card]="cardOverlay"
                  [callDestroy]="attendant.destroyEvent"
                  [callLike]="attendant.likeEvent"
-                 [ngClass]="['card-container']"
                  [ngClass]="['first']"
+                 
                  (onLike)="onCardInteract($event,attendant)">
             <div class="user_img" [style.background-image]="attendant.asBg">{{attendant.id}}</div>
         </sc-card>
+        
     </div>
+  </ion-row>
+  <ion-row>
     <div class="content-btns">
       <button id="non" ion-button outline>NON</button>
   <button id="oui" ion-button outline>OUI</button>
 </div>
+</ion-row>
 </ion-content>
