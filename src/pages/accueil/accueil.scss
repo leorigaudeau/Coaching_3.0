@@ -27,7 +27,7 @@ page-accueil {
     .contentbtn {
         width: 100%;
         text-align: center;
-        height: 30%;
+       
         .button {
             background-color: color($colors, primary, base);
             border-radius: 20px;
@@ -37,7 +37,7 @@ page-accueil {
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-top: 40%;
+            margin-top: 0%;
         }
     }
 }
