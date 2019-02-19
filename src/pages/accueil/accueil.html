@@ -21,14 +21,14 @@
       <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
     </ion-item>
   
-    <ion-item class="contentbtn">
+    <ion-item class="contentinputs">
       <ion-label floating>Password</ion-label>
       <ion-input [(ngModel)]="password"  type="password" value=""></ion-input>
     </ion-item>
   
   </ion-list>
   
-  <div padding>
-    <button primary block  (click)="login()">Sign In</button>
+  <div class="contentbtn">
+    <button ion-button (click)="login()">Sign In</button>
   </div>
 </ion-content>

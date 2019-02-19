@@ -15,6 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SoftMajeursPage {
 
+  list= [
+    { name: "HTML5", note: 1,coche: false },
+    { name: "JavaScript", note: 2,coche: false },
+    { name: "Css", note: 3,coche: false },
+    { name: "Git", note: 4 ,coche: false},
+    { name: "HTML5", note: 1,coche: false },
+    { name: "JavaScript", note: 2,coche: false },
+    { name: "Css", note: 3,coche: false },
+    { name: "Git", note: 4 ,coche: false}, { name: "HTML5", note: 1,coche: false },
+    { name: "JavaScript", note: 2,coche: false },
+    { name: "Css", note: 3,coche: false },
+    { name: "Git", note: 4 ,coche: false}
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -22,4 +36,19 @@ export class SoftMajeursPage {
     console.log('ionViewDidLoad SoftMajeursPage');
   }
 
+  
+  updateSoftskill(){
+    this.list.forEach(element => {
+      console.log("event"+element.name+" " +element.coche)
+    });
+    
+  }
+
+  // onModelChange(event){
+  //   this.rate = event;
+  //   console.log(event);
+  // };
+
+  
+  
 }

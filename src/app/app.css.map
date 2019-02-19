@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "soft-majeurs.scss"
+        "app.scss"
     ],
     "names": [],
-    "file": "soft-majeurs.css"
+    "file": "app.css"
 }

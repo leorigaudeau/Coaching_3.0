@@ -18,6 +18,70 @@ page-soft-skill-swipe {
     justify-content: center !important;
     text-align: center !important;
     font-size: 25px;
+    vertical-align: middle !important;
+    }
+.card-container {
+    margin-top: 15% !important;
+    width: 100% !important;
+    height:65% !important;
+    text-align: center !important;
+    
+    }
+.first {
+    width: 80% !important;
+    height: 50% !important;
+    border:1px !important;
+    border-style:solid !important;
+    border-color: color($colors, primary, base) !important;
+    margin-left: 6% !important;
+}
+.imgicon {
+    width: 45% !important;
+    height: 35% !important;
+}
+.content-btns {
+    width: 100% !important;
+    height: 20% !important;
+    text-align: center !important;
+    
+    
+    .button {
+        width: 45%;
+        border-radius: 50px;
+        border-color: #ed7305;
+        padding: 20px 38px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+    }
+    #oui {
+        background-color: color($colors, true, base) !important;
+        color: color($colors, light, base) !important;
+    }
+    #non {
+        background-color: color($colors, false, base) !important;
+        color: color($colors, light, base) !important;
+    }
+
+}
+.containertitle1 {
+    width: 100% !important;
+    height: 10% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    
+}
+.title1 {
+    width: 45% !important;
+    height: 50% !important;
+    border:1.5px !important;
+    border-style:ridge !important;
+    border-color: color($colors, secondary, base) !important;
+    margin-top: 8% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 25px;
     }
 .card-container {
     width: 100% !important;

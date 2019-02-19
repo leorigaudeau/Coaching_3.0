@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ProfilPage page.
+ * Generated class for the WelcomePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,23 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-profil',
-  templateUrl: 'profil.html',
+  selector: 'page-welcome',
+  templateUrl: 'welcome.html',
 })
-export class ProfilPage {
-list = [
-    { name:"SoftSkill 1", note:1},
-    { name:"SoftSkill 2", note:2},
-    { name:"SoftSkill 3", note:3},
-    { name:"SoftSkill 4", note:4},
-  ]
+export class WelcomePage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilPage');
+    console.log('ionViewDidLoad WelcomePage');
   }
-
-  
 
 }
