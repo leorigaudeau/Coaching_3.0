@@ -1,6 +1,7 @@
 import { Component, EventEmitter } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DomSanitizer} from "@angular/platform-browser";
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the SoftSkillSwipePage page.
@@ -26,16 +27,19 @@ export class SoftSkillSwipePage {
       }
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private sanitizer: DomSanitizer) {
-  
-    for (let i = 0; i < 4; i++) {
-      this.attendants.push({
-          id: i + 1,
+  constructor(public navCtrl: NavController, public navParams: NavParams,private sanitizer: DomSanitizer,private http: HttpClient) {
+    this.http.get<SoftSkill[]>('https://actincoachapi.herokuapp.com/getSoftSkills').subscribe(res=>{
+      res.forEach(a=>{
+        this.attendants.push({
+          id: a.nom_softskill,
           likeEvent: new EventEmitter(),
           destroyEvent: new EventEmitter(),
           asBg: sanitizer.bypassSecurityTrustStyle('url(http://placehold.it/500x500)')
-      });
-  }
+
+      })    
+    });
+    });
+
 
   this.ready = true;
   }
@@ -49,4 +53,9 @@ export class SoftSkillSwipePage {
     console.log(event);
   }
 
+}
+export interface SoftSkill {
+  id_softskill:string;
+  logo:string;
+  nom_softskill: string;
 }

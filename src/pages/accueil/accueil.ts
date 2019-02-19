@@ -16,24 +16,40 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'accueil.html',
 })
 export class AccueilPage {
-
+  
   username:string;
   password:string;
+  isError:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
+  this.isError=false;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccueilPage');
   }
+  
 
   login(){
     var test={"login":this.username,"password":this.password}
     console.log(test)
-    this.http.post('https://actincoachapi.herokuapp.com/login',test).subscribe(res=>{
-      console.log(res)
+    this.http.post<UserResponse>('https://actincoachapi.herokuapp.com/login',test).subscribe(res=>{ 
+    if(!res.etat){
       this.navCtrl.push('SoftSkillSwipePage');
+    }else{
+      this.isError=true;
+      console.log("false");
+    }
+
+       
     });
   }
 
+}
+
+interface UserResponse {
+  login: string;
+  bio: string;
+  company: string;
+  etat:boolean;
 }
