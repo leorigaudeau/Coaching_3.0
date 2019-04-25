@@ -6,14 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SwipeableCardModule } from 'ng2-swipeable-card';
 import { MyApp } from './app.component';
-import { ProfilPage } from '../pages/profil/profil';
-import { ReglesPage } from '../pages/regles/regles';
-import { NotationPage } from '../pages/notation/notation';
-import { SoftMajeursPage } from '../pages/soft-majeurs/soft-majeurs';
-import { SoftMineursPage } from '../pages/soft-mineurs/soft-mineurs';
-import { HomePage } from '../pages/home/home';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
+
   declarations: [
     MyApp,   
   ],
@@ -21,6 +17,7 @@ import { HomePage } from '../pages/home/home';
     BrowserModule,
     HttpClientModule,
     SwipeableCardModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,7 +28,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+  ],
 })
 export class AppModule {}

@@ -32,13 +32,11 @@ export class AccueilPage {
 
   login(){
     var test={"login":this.username,"password":this.password}
-    console.log(test)
-    this.http.post<UserResponse>('https://actincoachapi.herokuapp.com/login',test).subscribe(res=>{ 
+    this.http.post<UserResponse>('https://actincoachapi.appspot.com/login',test).subscribe(res=>{ 
     if(!res.etat){
       this.navCtrl.push('SoftSkillSwipePage');
     }else{
       this.isError=true;
-      console.log("false");
     }
 
        

@@ -1,18 +1,11 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>SoftSkillSwipe</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
-
-
   <ion-row class="containertitle1">
     <h1 class="title1">SoftSkills</h1>
+    <bar-rating name="rating" [theme]="'horizontal'" [(rate)]="movieRating" [max]="5" ></bar-rating>
 
   </ion-row>
   <ion-row class="card-container" *ngIf="ready">
@@ -21,7 +14,7 @@
         [callDestroy]="attendant.destroyEvent" [callLike]="attendant.likeEvent" [ngClass]="['first']" (onLike)="onCardInteract($event,attendant)">
 
         <img src="../../assets/icon/faqs.png" class="imgicon">
-        <p> {{attendant.id}}
+        <p> {{attendant.nom_softskill}}
           <br>
         </p>
       </sc-card>
@@ -30,9 +23,8 @@
   </ion-row>
   <ion-row>
     <div class="content-btns">
-      <button id="non" ion-button outline>NON</button>
-
-      <button id="oui" ion-button outline>OUI</button>
+      <button id="non" (click)="like(false)" ion-button outline>NON</button>
+      <button id="oui" (click)="like(true)" ion-button outline>OUI</button>
     </div>
   </ion-row>
 </ion-content>
