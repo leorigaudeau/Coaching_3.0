@@ -29,11 +29,11 @@ export class SoftMineursPage {
   }
 
     
-  updateSoftskill(){
+  updateSoftskill(element){
     if(element.coche){
-      selected++;
+      this.selected++;
     }else{
-      selected--;
+      this.selected--;
     }
     
   }
