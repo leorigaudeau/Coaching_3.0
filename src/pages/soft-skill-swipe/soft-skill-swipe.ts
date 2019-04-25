@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import {SoftSkill} from '../../bean/SoftSkill'
+import { SoftMajeursPage } from '../soft-majeurss/soft-majeurs';
+
 /**
  * Generated class for the SoftSkillSwipePage page.
  *
@@ -33,7 +35,7 @@ export class SoftSkillSwipePage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController,private http: HttpClient) {
     this.http.get<SoftSkill[]>('https://actincoachapi.appspot.com/getSoftSkills').subscribe(res=>{
-      for(var i=0;i<2;i++){
+      for(var i=0;i<10;i++){
         var a=res[i]
         this.attendants.push({
           nom_softskill:a.nom_softskill,
@@ -68,10 +70,8 @@ export class SoftSkillSwipePage {
     if (this.attendants.length > 0) {
         self.attendants[this.cardCursor].likeEvent.emit({ like });
         if(like){
-          var test=self.attendants[this.cardCursor]
-          var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
-          this.softSkillLike.push(softskill);
           this.presentPrompt()
+
         }else{
           self.attendants[this.cardCursor].note=2;
           var test=self.attendants[this.cardCursor]
@@ -86,7 +86,6 @@ export class SoftSkillSwipePage {
     console.log('oncard '+this.cardCursor)
     if(event.like){
       this.presentPrompt()
-      this.softSkillLike.push(attendant);
     }else{
       this.softSkillUnlike.push(attendant);
       this.nextCard();
@@ -101,7 +100,7 @@ export class SoftSkillSwipePage {
   nextCard(){
     console.log(JSON.stringify(this.softSkillLike))
     if(this.isLastCard()){
-      console.log("yes")
+      this.navCtrl.push('SoftMajeursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
     }else{
       this.cardCursor++
     }
@@ -115,16 +114,24 @@ export class SoftSkillSwipePage {
       enableBackdropDismiss:false,
       buttons: [
            { text: '3', handler: data => {
-            console.log('oncard '+this.cardCursor)
-            this.attendants[this.cardCursor].note=3;
+            var test=this.attendants[this.cardCursor];
+            test.note=3
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            this.softSkillLike.push(softskill);
             this.nextCard();
            }},
            { text: '4', handler: data => {
-            this.attendants[this.cardCursor].note=4;
+            var test=this.attendants[this.cardCursor];
+            test.note=4
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            this.softSkillLike.push(softskill);
             this.nextCard();
            }},
            { text: '5', handler: data => {
-            this.attendants[this.cardCursor].note=5;
+            var test=this.attendants[this.cardCursor];
+            test.note=5
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            this.softSkillLike.push(softskill);
             this.nextCard();
            }}
       ]

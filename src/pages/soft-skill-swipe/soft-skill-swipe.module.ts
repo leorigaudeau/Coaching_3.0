@@ -14,6 +14,7 @@ import { BarRatingModule } from 'ngx-bar-rating'
     SwipeCardsModule,
     IonicPageModule.forChild(SoftSkillSwipePage),
     BarRatingModule,
+    
   ],
   exports: [
     SoftSkillSwipePage

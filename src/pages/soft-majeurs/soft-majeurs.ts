@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {SoftSkill} from '../../bean/SoftSkill'
 
 /**
  * Generated class for the SoftMajeursPage page.
@@ -14,22 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'soft-majeurs.html',
 })
 export class SoftMajeursPage {
-
-  list= [
-    { name: "HTML5", note: 1,coche: false },
-    { name: "JavaScript", note: 2,coche: false },
-    { name: "Css", note: 3,coche: false },
-    { name: "Git", note: 4 ,coche: false},
-    { name: "HTML5", note: 1,coche: false },
-    { name: "JavaScript", note: 2,coche: false },
-    { name: "Css", note: 3,coche: false },
-    { name: "Git", note: 4 ,coche: false}, { name: "HTML5", note: 1,coche: false },
-    { name: "JavaScript", note: 2,coche: false },
-    { name: "Css", note: 3,coche: false },
-    { name: "Git", note: 4 ,coche: false}
-  ];
-
+  softSkillLike=[]
+  softSkillUnlike=[]
+  selected:number=0
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+     this.softSkillLike=this.navParams.get("like")
+     this.softSkillUnlike=this.navParams.get("unlike")
+     console.log(this.softSkillLike)
   }
 
   ionViewDidLoad() {
@@ -37,11 +29,17 @@ export class SoftMajeursPage {
   }
 
   
-  updateSoftskill(){
-    this.list.forEach(element => {
-      console.log("event"+element.name+" " +element.coche)
-    });
+  updateSoftskill(element){
+    if(element.coche){
+      this.selected++;
+    }else{
+      this.selected--;
+    }
     
+  }
+
+  nextstep(){
+    this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
   }
 
   // onModelChange(event){

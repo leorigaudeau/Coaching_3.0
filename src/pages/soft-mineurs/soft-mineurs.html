@@ -1,5 +1,5 @@
 <!--
-  Generated template for the SoftMineursPage page.
+  Generated template for the SoftMajeursPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>soft-mineurs</ion-title>
+    <ion-title>Softskill Mineur</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,29 @@
 
 <ion-content padding>
 
+  <p class="titlepage">
+    Liste des 3 compétences à choisir:
+  </p>
+  <ion-grid class="gridsoftskill">
+    <ion-row *ngFor="let element of softSkillUnlike">
+      <ion-col class="titlepage-name" col-4>
+        <p class="intitule">{{element.nom_softskill}}</p>
+      </ion-col>
+      <ion-list>
+        <ion-col class="titlepage-check" col-2>
+          <ion-checkbox [(ngModel)]="element.coche" (ionChange)="updateSoftskill()" class="checkboxstyle"></ion-checkbox>
+        </ion-col>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="gridbutton">
+    <ion-row>
+      <ion-col>
+        <button class="btn-retour"><ion-icon name="arrow-round-back"></ion-icon> Retour</button>
+      </ion-col>
+      <ion-col>
+        <button class="btn-suite" (click)="nextstep()">Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
