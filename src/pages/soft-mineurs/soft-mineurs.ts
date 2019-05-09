@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {SoftSkill} from '../../bean/SoftSkill'
+import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
+
 
 /**
  * Generated class for the SoftMineursPage page.
@@ -18,7 +21,7 @@ export class SoftMineursPage {
   softSkillLike=[]
   softSkillUnlike=[]
   selected:number=0
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
     this.softSkillLike=this.navParams.get("like")
     this.softSkillUnlike=this.navParams.get("unlike")
     console.log(this.softSkillLike)
@@ -30,7 +33,7 @@ export class SoftMineursPage {
 
     
   updateSoftskill(element){
-    if(element.coche){
+    if(element.isMineur){
       this.selected++;
     }else{
       this.selected--;
@@ -39,7 +42,15 @@ export class SoftMineursPage {
   }
 
   nextstep(){
-    this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
-  }
+    this.storage.get('id').then(id=>{
+      console.log(id)
+      var test={"skills":this.softSkillUnlike,"id":id}
+      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
+        this.navCtrl.push('ReglesPage');
+  
+    })
+    })
 
+
+  }
 }

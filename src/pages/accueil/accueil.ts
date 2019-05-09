@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
 
 
 /**
@@ -21,7 +22,7 @@ export class AccueilPage {
   password:string;
   isError:boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
   this.isError=false;
   }
 
@@ -34,6 +35,7 @@ export class AccueilPage {
     var test={"login":this.username,"password":this.password}
     this.http.post<UserResponse>('https://actincoachapi.appspot.com/login',test).subscribe(res=>{ 
     if(!res.etat){
+      this.storage.set('id', res.id_user);
       this.navCtrl.push('ReglesPage');
     }else{
       this.isError=true;
@@ -47,7 +49,7 @@ export class AccueilPage {
 
 interface UserResponse {
   login: string;
-  bio: string;
-  company: string;
+  id_user: string;
+  entreprise: string;
   etat:boolean;
 }
