@@ -1,0 +1,36 @@
+<!--
+  Generated template for the NotationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Changement de MotDePasse</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+  
+    <div class="form">
+      <h1>Changer son mot de passe</h1>
+  
+      <ion-item class="contentinputs">
+        <ion-label floating>Ancien mot de passe</ion-label>
+        <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
+      </ion-item>
+  
+      <ion-item class="contentinputs">
+        <ion-label floating>Nouveau mot de passe</ion-label>
+        <ion-input [(ngModel)]="password" type="password" value=""></ion-input>
+      </ion-item>
+  
+      <div class="buttons">
+        <button id="return">Retour</button>
+        <button id="validate">Valider</button>
+      </div>
+    </div>
+  </ion-content>

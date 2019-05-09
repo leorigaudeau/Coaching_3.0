@@ -52,4 +52,19 @@ export class HomePage {
     this.navCtrl.push('SoftMajeursPage');
   }
 
+  GoOnToCOACHAccueil(){
+    this.navCtrl.push('CoachAccueilPage');
+  }
+  GoOnToCoachListeprofilPage(){
+    this.navCtrl.push('CoachListeprofilPage');
+  }
+  GoOnToCoachListeentreprisePage(){
+    this.navCtrl.push('CoachListeentreprisePage');
+  }
+
+  GoOnToCoachbienjouer(){
+    this.navCtrl.push('FindejeuPage');
+  }
+
+  
 }

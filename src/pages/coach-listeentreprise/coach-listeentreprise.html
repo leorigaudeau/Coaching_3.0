@@ -1,0 +1,41 @@
+<!--
+  Generated template for the CoachListeentreprisePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>coach-listeentreprise</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p class="titlepage">Sélectionnez une entreprise :</p>
+
+  <ion-grid class="gridsoftskill">
+    <ion-row class="plop">
+      <ion-col *ngFor="let element of list" class="gridcol" col-5>
+        <a href="/#/home">
+          <ion-row class="titlerowblock">
+            <ion-col class="titlecolblock">
+              <p class="titlepblock">{{element.name}}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="imgrowblock">
+            <ion-col class="imgcolblock">
+              <img src="{{element.image}}" class="imgblock">
+            </ion-col>
+          </ion-row>
+
+        </a>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

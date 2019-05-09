@@ -1,0 +1,22 @@
+page-findejeu {
+    .bg-image{
+        background-image: url('../../assets/imgs/Fond.svg') !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .titrePage{
+       color: color($colors,primary,base);
+       font-size: 6rem;
+       text-align: center;
+       opacity: 0.7;
+    }
+}
