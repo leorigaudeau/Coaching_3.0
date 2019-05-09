@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import {SoftSkill} from '../../bean/SoftSkill'
-import { SoftMajeursPage } from '../soft-majeurss/soft-majeurs';
+import { SoftMajeursPage } from '../soft-majeurs/soft-majeurs';
 
 /**
  * Generated class for the SoftSkillSwipePage page.

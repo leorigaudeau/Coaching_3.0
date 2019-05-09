@@ -34,7 +34,7 @@ export class AccueilPage {
     var test={"login":this.username,"password":this.password}
     this.http.post<UserResponse>('https://actincoachapi.appspot.com/login',test).subscribe(res=>{ 
     if(!res.etat){
-      this.navCtrl.push('SoftSkillSwipePage');
+      this.navCtrl.push('ReglesPage');
     }else{
       this.isError=true;
     }

@@ -18,7 +18,7 @@ export class ReglesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   GoOnToSwitch(){
-    this.navCtrl.push(SoftSkillSwipePage);
+    this.navCtrl.push('SoftSkillSwipePage');
   }
 
   ionViewDidLoad() {
