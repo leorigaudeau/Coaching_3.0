@@ -15,10 +15,19 @@
 
 <ion-content padding>
 
-    <div *ngFor="let element of utilisateur">
-        <p>
-            {{element.name}}
-        </p>
-    </div>
+  <ion-grid>
+    <ion-row>
+        <ion-col col-4> <div *ngFor="let element of utilisateur">
+            <p>
+                {{element.name}} 
+            </p>
+            
+        </div>
+      </ion-col>
+        <ion-col><ion-icon name="create"></ion-icon></ion-col>
+    </ion-row>
+  </ion-grid>
+
+   
 
 </ion-content>
