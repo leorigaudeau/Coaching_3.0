@@ -40,16 +40,16 @@ export class SoftMajeursPage {
     
   }
 
-  nextstep(){
-    this.storage.get('id').then(id=>{
-      console.log(id)
-      var test={"skills":this.softSkillLike,"id":id}
-      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
-        this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
+  // nextstep(){
+  //   this.storage.get('id').then(id=>{
+  //     console.log(id)
+  //     var test={"skills":this.softSkillLike,"id":id}
+  //     this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
+  //       this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
   
-    })
-    })
-  }
+  //   })
+  //   })
+  // }
 
   // onModelChange(event){
   //   this.rate = event;
