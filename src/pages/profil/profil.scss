@@ -1,15 +1,13 @@
 page-profil {
-    .home-title-softkills{
-        text-align:center
-    }
     .home-informations{
+        margin-top: 20px;
         h2{
             border-bottom:1px solid color($colors,primary,base);
         }
         
     }
     .home-mise-en-valeur{
-        
+        margin-top: 30px;
         .home-valeur-box{
             border: 1px solid color($colors,primary,base);
             border-radius: 20px;
@@ -17,7 +15,7 @@ page-profil {
         }
     }
     .home-progresser{
-        
+        margin-top: 50px;
         .home-progresser-box{
             border: 1px solid color($colors,primary,base);
             border-radius: 20px;

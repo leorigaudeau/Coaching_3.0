@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the CoachAjoutcollaboratorPage page.
+ * Generated class for the GererutilisateurPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-coach-ajoutcollaborator',
-  templateUrl: 'coach-ajoutcollaborator.html',
+  selector: 'page-gererutilisateur',
+  templateUrl: 'gererutilisateur.html',
 })
-export class CoachAjoutcollaboratorPage {
+export class GererutilisateurPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CoachAjoutcollaboratorPage');
+    console.log('ionViewDidLoad GererutilisateurPage');
   }
 
 }
