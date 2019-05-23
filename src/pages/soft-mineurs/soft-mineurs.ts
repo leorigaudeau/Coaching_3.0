@@ -47,10 +47,10 @@ export class SoftMineursPage {
       var test={"skills":this.softSkillUnlike,"id":id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
         this.navCtrl.push('ReglesPage');
-  
     })
     })
-
-
   }
+}
+interface UserResponse {
+  
 }
