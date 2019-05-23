@@ -45,12 +45,20 @@ export class SoftMineursPage {
     this.storage.get('id').then(id=>{
       console.log(id)
       var test={"skills":this.softSkillUnlike,"id":id}
-      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
-        this.navCtrl.push('ReglesPage');
+      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{
+        this.storage.set("softskillMineurs",this.this.softSkillUnlike) 
+        this.navCtrl.push('ProfilPage');
   
     })
     })
 
 
   }
+}
+
+interface UserResponse {
+  login: string;
+  id_user: string;
+  entreprise: string;
+  etat:boolean;
 }

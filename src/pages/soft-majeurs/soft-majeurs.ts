@@ -20,7 +20,7 @@ export class SoftMajeursPage {
   softSkillLike=[]
   softSkillUnlike=[]
   selected:number=0
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
      this.softSkillLike=this.navParams.get("like")
      this.softSkillUnlike=this.navParams.get("unlike")
      console.log(this.softSkillLike)
@@ -46,16 +46,16 @@ export class SoftMajeursPage {
       var test={"skills":this.softSkillLike,"id":id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
         this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
-  
+        this.storage.set("softskillMajeurs",this.softSkillLike)
     })
     })
   }
-
-  // onModelChange(event){
-  //   this.rate = event;
-  //   console.log(event);
-  // };
-
   
-  
+}
+
+interface UserResponse {
+  login: string;
+  id_user: string;
+  entreprise: string;
+  etat:boolean;
 }
