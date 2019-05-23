@@ -46,16 +46,17 @@ export class SoftMajeursPage {
       var test={"skills":this.softSkillLike,"id":id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
         this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
-  
     })
     })
   }
-
-  // onModelChange(event){
-  //   this.rate = event;
-  //   console.log(event);
-  // };
+  previewstep(){
+    this.navCtrl.pop();
+  }
 
   
+  
+}
+
+interface UserResponse {
   
 }

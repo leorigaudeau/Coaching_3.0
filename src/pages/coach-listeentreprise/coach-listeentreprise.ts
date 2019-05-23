@@ -16,16 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CoachListeentreprisePage {
 
   list= [
-    { name: "Entreprise1", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise2", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise3", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise4", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise5", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise6", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise7", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise8", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise9", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    { name: "Entreprise10", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:1, name: "Entreprise1", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:2, name: "Entreprise2", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:3, name: "Entreprise3", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:4, name: "Entreprise4", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:5, name: "Entreprise5", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:6, name: "Entreprise6", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:7, name: "Entreprise7", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:8, name: "Entreprise8", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:9, name: "Entreprise9", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
+    {id:10, name: "Entreprise10", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
     
   ]
 
@@ -36,4 +36,5 @@ export class CoachListeentreprisePage {
     console.log('ionViewDidLoad CoachListeentreprisePage');
   }
 
+  
 }

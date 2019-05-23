@@ -2,13 +2,17 @@ page-coach-listeentreprise {
 a{
     text-decoration: none;
 }
-.titlepage{
-    padding: 0;
-    margin: 0;
-    font-size: 2em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+.content-title{
+    width: 100%;
+    text-align: center;
+    .titlepage{
+        padding: 0;
+        margin: 0;
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+    }
 }
 .gridsoftskill{
     padding: 0;

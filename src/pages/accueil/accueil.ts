@@ -36,7 +36,14 @@ export class AccueilPage {
     this.http.post<UserResponse>('https://actincoachapi.appspot.com/login',test).subscribe(res=>{ 
     if(!res.etat){
       this.storage.set('id', res.id_user);
-      this.navCtrl.push('ReglesPage');
+      if (res.nom_role == "collaborateur") {
+        this.navCtrl.push('ReglesPage'); 
+      } else if(res.nom_role == "coach") {
+        this.navCtrl.push('CoachAccueilPage');
+      }else if(res.nom_role == "entreprise"){
+        this.navCtrl.push('WelcomePage');
+      }
+      res.nom_role
     }else{
       this.isError=true;
     }
@@ -50,6 +57,7 @@ export class AccueilPage {
 interface UserResponse {
   login: string;
   id_user: string;
+  nom_role: string;
   entreprise: string;
   etat:boolean;
 }
