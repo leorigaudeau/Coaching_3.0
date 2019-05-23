@@ -117,7 +117,7 @@ export class SoftSkillSwipePage {
             var test=this.attendants[this.cardCursor];
             test.note=3
             var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
-            this.softSkillLike.push(softskill);
+            this.softSkillUnlike.push(softskill);
             this.nextCard();
            }},
            { text: '4', handler: data => {

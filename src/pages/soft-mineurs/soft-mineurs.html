@@ -36,7 +36,7 @@
         <button class="btn-retour" (click)="previewstep()"><ion-icon name="arrow-round-back"></ion-icon> Retour</button>
       </ion-col>
       <ion-col>
-        <button *ngIf="(3<=selected && selected<=5) || (softSkillLike.length<5 && selected==softSkillLike.length)" class="btn-suite" (click)="nextstep()" >Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
+        <button *ngIf="(3<=selected && selected<=5) || (softSkillUnlike.length<5 && selected==softSkillUnlike.length)" class="btn-suite" (click)="nextstep()" >Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
         </ion-col>
     </ion-row>
   </ion-grid>

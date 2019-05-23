@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the ProfilPage page.
@@ -15,22 +17,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilPage {
   info = {nom:"Moreau",prenom:"Michel",desc:"Meilleur humain 2019"}
+  softSkillMajeur=[]
+  softSkillMineur=[]
   
-  softSkillMajeur = [
-    { name: "Vivacité", note: 1 },
-    { name: "Organisé", note: 2 },
-    { name: "Sociable", note: 3 }
-  ]
-  softSkillMineur = [
-    { name: "Logique", note: 1 },
-    { name: "Equipe", note: 2 },
-    { name: "Altruiste", note: 3 }
-  ]
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilPage');
+    this.storage.get('softskillMineurs').then(softskillMineurs=>{
+      this.softSkillMineur=softskillMineurs;
+    })
+    this.storage.get('softskillMajeurs').then(softskillMajeurs=>{
+      this.softSkillMajeur=softskillMajeurs;
+    })
   }
 
 

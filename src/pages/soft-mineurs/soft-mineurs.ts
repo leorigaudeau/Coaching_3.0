@@ -46,7 +46,7 @@ export class SoftMineursPage {
       console.log(id)
       var test={"skills":this.softSkillUnlike,"id":id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{
-        this.storage.set("softskillMineurs",this.this.softSkillUnlike) 
+        this.storage.set("softskillMineurs",this.softSkillUnlike) 
         this.navCtrl.push('ProfilPage');
   
     })
