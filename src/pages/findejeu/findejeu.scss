@@ -1,7 +1,6 @@
 page-findejeu {
-    .bg-image{
-        background-image: url('../../assets/imgs/Fond.svg') !important;
-        background-repeat: no-repeat;
+    ion-content{
+        background-image: url(../../assets/imgs/Fond.svg);
         background-position: center;
         background-size: cover;
     }

@@ -1,4 +1,9 @@
 page-profil {
+    ion-content{
+        background-image: url(../../assets/imgs/Fond.svg);
+        background-position: center;
+        background-size: cover;
+    }
     .home-informations{
         margin-top: 20px;
         h2{
