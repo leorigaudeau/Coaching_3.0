@@ -24,7 +24,7 @@ export class SoftMineursPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
     this.softSkillLike=this.navParams.get("like")
     this.softSkillUnlike=this.navParams.get("unlike")
-    console.log(this.softSkillLike)
+    console.log(this.softSkillUnlike)
  }
 
   ionViewDidLoad() {

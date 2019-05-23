@@ -6,26 +6,30 @@ page-regles {
     }
     .content-1 {
         width: 100%;
-        height: 55%;
         margin-top: 5%;
         h1 {
             width: 100%;
             height: 15%;
             text-align: center;
         }
-        p { text-align: justify;
+        .ctn-text{
             width: 100%;
-            
-        }
-        .tmp{
+            text-align: center;
+            .tmp{
             text-align: center
+            }
         }
+        p { 
+            text-align: justify;
+        }
+        
+        
     }
     .footer {
         width: 100%;
         height: 30%;
         text-align: center;
-        margin-top:20%;
+        // margin-top:20%;
         .fcontent {
             h2 {
                 font-size: 15px;

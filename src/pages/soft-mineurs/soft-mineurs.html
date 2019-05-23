@@ -16,14 +16,29 @@
 <ion-content padding>
 
   <p class="titlepage">
-    Liste des 3 compétences à choisir:
+    Liste des 3 à 5 compétences pour améliorer votre quotidien:
   </p>
   <ion-grid class="gridsoftskill">
     <ion-row *ngFor="let element of softSkillUnlike">
       <ion-col class="titlepage-name" col-4>
         <p class="intitule">{{element.nom_softskill}}</p>
       </ion-col>
-      <ion-col></ion-col>
+      <ion-col class="titlepage-note" col-6>
+        <ion-grid>
+          <ion-row>
+            <div class="casecontent" *ngFor="let index of [1,2,3,4,5]; ">
+              <div *ngIf="element.note < index; else elseelement">
+                <div class='casevide'></div>
+              </div>
+              <div class="casecontent">
+                <ng-template #elseelement>
+                  <div class='casenote'></div>
+                </ng-template>
+              </div>
+            </div>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
       <ion-list>
         <ion-col class="titlepage-check" col-2>
           <ion-checkbox [(ngModel)]="element.isMineur" (ionChange)="updateSoftskill(element)" class="checkboxstyle"></ion-checkbox>
@@ -37,7 +52,7 @@
         <button class="btn-retour" (click)="previewstep()"><ion-icon name="arrow-round-back"></ion-icon> Retour</button>
       </ion-col>
       <ion-col>
-        <button *ngIf="(3<=selected && selected<=5) || (softSkillLike.length<5 && selected==softSkillLike.length)" class="btn-suite" (click)="nextstep()" >Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
+        <button *ngIf="(3<=selected && selected<=5) || (softSkillLike.length<3 && selected==softSkillLike.length)" class="btn-suite" (click)="nextstep()" >Suite <ion-icon name="arrow-round-forward"></ion-icon></button>
         </ion-col>
     </ion-row>
   </ion-grid>
