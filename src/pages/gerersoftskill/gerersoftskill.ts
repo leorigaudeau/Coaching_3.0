@@ -15,6 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GerersoftskillPage {
 
+  softskill = [
+    {name:"Softskill 1"},
+    {name:"Softskill 2"},
+    {name:"Softskill 3"},
+    {name:"Softskill 4"},
+
+  ]
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

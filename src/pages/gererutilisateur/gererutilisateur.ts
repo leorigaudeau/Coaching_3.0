@@ -15,6 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GererutilisateurPage {
 
+  utilisateur = [
+    {name:"Utilisateur 1"},
+    {name:"Utilisateur 2"},
+    {name:"Utilisateur 3"},
+    {name:"Utilisateur 4"},
+
+  ]
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
