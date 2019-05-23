@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the NotationPage page.
+ * Generated class for the GerersoftskillPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-notation',
-  templateUrl: 'notation.html',
+  selector: 'page-gerersoftskill',
+  templateUrl: 'gerersoftskill.html',
 })
-export class NotationPage {
+export class GerersoftskillPage {
+
+  softskill = [
+    {name:"Softskill 1"},
+    {name:"Softskill 2"},
+    {name:"Softskill 3"},
+    {name:"Softskill 4"},
+
+  ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NotationPage');
+    console.log('ionViewDidLoad GerersoftskillPage');
   }
 
 }

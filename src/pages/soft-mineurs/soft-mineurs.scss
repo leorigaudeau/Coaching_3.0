@@ -1,3 +1,56 @@
 page-soft-mineurs {
+    ion-col {
+        text-align: center;
+    }
 
+    .titlepage {
+        width: 100%;
+        color: color($colors, secondary, base);
+        font-size: 2rem;
+        text-align: center;
+    }
+    .gridsoftskill {
+        height: 80%;
+        overflow: auto;
+    }
+    .gridbutton {
+        margin-top: 5%;
+        position: absolute;
+        bottom: 20px;
+        
+    }
+    .casecontent {
+        height: 19px;
+    }
+    .casenote {
+        width: 19px;
+        height: 19px;
+        border-radius: 25px;
+        background: color($colors, primary, base);
+        border: 1px solid color($colors, primary, base);
+    }
+    .casevide {
+        width: 19px;
+        height: 19px;
+        border-radius: 25px;
+        background: color($colors, light, base);
+        border: 1px solid color($colors, primary, base);
+    }
+    .btn-retour {
+        width: 100px;
+        font-size: 1.6rem;
+        background: none;
+        color: color($colors,secondary,base)
+    }
+    .btn-suite {
+        width: 100px;
+        border-radius: 25px;
+        font-size: 1.6rem;
+        background: color($colors,primary,base);
+        color: white;
+    }
+
+    .checkboxstyle {
+        margin-top: 15px;
+    }
 }

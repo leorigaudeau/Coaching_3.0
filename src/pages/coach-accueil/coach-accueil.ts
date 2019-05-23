@@ -14,9 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'coach-accueil.html',
 })
 export class CoachAccueilPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
+
+  info = {nom:"Mary",prenom:"Marc",desc:"Meilleur Coach 2019"}
+  
+  GoOnToAllEntreprise(){
+    this.navCtrl.push('CoachListeentreprisePage');
+  }
+
+  softSkillMineur = [
+    { name: "Logique", note: 1 },
+    { name: "Equipe", note: 2 },
+    { name: "Altruiste", note: 3 }
+  ]
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachAccueilPage');

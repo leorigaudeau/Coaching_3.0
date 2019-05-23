@@ -50,6 +50,10 @@ export class SoftMajeursPage {
     })
     })
   }
+  previewstep(){
+    this.navCtrl.pop();
+  }
+
   
 }
 

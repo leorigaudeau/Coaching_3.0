@@ -14,11 +14,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
-list = [
-    { name:"SoftSkill 1", note:1},
-    { name:"SoftSkill 2", note:2},
-    { name:"SoftSkill 3", note:3},
-    { name:"SoftSkill 4", note:4},
+  info = {nom:"Moreau",prenom:"Michel",desc:"Meilleur humain 2019"}
+  
+  softSkillMajeur = [
+    { name: "Vivacité", note: 1 },
+    { name: "Organisé", note: 2 },
+    { name: "Sociable", note: 3 }
+  ]
+  softSkillMineur = [
+    { name: "Logique", note: 1 },
+    { name: "Equipe", note: 2 },
+    { name: "Altruiste", note: 3 }
   ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -27,6 +33,6 @@ list = [
     console.log('ionViewDidLoad ProfilPage');
   }
 
-  
+
 
 }

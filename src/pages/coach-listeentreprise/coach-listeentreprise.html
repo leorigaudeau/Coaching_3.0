@@ -7,15 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>coach-listeentreprise</ion-title>
+    <ion-title>Liste des entreprises</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <p class="titlepage">Sélectionnez une entreprise :</p>
-
+  <div class="content-title">
+      <p class="titlepage">Sélectionnez une entreprise :</p>
+  </div>
+  
   <ion-grid class="gridsoftskill">
     <ion-row class="plop">
       <ion-col *ngFor="let element of list" class="gridcol" col-5>
