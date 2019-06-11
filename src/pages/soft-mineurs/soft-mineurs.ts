@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {SoftSkill} from '../../bean/SoftSkill'
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 
@@ -42,13 +41,12 @@ export class SoftMineursPage {
   }
 
   nextstep(){
-    this.storage.get('id').then(id=>{
-      console.log(id)
-      var test={"skills":this.softSkillUnlike,"id":id}
+    this.storage.get('user').then(user=>{
+      console.log(user.id)
+      var test={"skills":this.softSkillUnlike,"id":user.id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{
         this.storage.set("softskillMineurs",this.softSkillUnlike) 
-        this.navCtrl.push('ProfilPage');
-  
+        this.navCtrl.push('SoftMajeursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});  
     })
     })
   }

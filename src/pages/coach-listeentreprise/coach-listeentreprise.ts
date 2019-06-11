@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Storage } from '@ionic/storage';
+import { HttpClient } from '@angular/common/http';
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 /**
  * Generated class for the CoachListeentreprisePage page.
  *
@@ -15,26 +17,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CoachListeentreprisePage {
 
-  list= [
-    {id:1, name: "Entreprise1", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:2, name: "Entreprise2", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:3, name: "Entreprise3", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:4, name: "Entreprise4", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:5, name: "Entreprise5", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:6, name: "Entreprise6", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:7, name: "Entreprise7", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:8, name: "Entreprise8", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:9, name: "Entreprise9", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    {id:10, name: "Entreprise10", image: "https://fr.freelogodesign.org/Content/img/logo-ex-3.png"},
-    
-  ]
+  user={}
+  list= []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachListeentreprisePage');
+    this.storage.get('user').then(user=>{
+      this.user=user;
+      var body={"coach":user.id}
+      this.http.post<ListEntreprise[]>('https://actincoachapi.appspot.com/coach/getEntreprise',body).subscribe(res=>{
+       this.list=res;
+       console.log(res)
+      })
+
+    })
   }
 
   
+}
+
+interface ListEntreprise {
+  nom_entreprise: string;
+  id_entreprise: string;
+  logo_entreprise: string;
 }

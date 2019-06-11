@@ -100,7 +100,7 @@ export class SoftSkillSwipePage {
   nextCard(){
     console.log(JSON.stringify(this.softSkillLike))
     if(this.isLastCard()){
-      this.navCtrl.push('SoftMajeursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
+      this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
     }else{
       this.cardCursor++
     }

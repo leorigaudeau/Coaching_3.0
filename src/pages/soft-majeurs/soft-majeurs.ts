@@ -41,12 +41,13 @@ export class SoftMajeursPage {
   }
 
   nextstep(){
-    this.storage.get('id').then(id=>{
-      console.log(id)
-      var test={"skills":this.softSkillLike,"id":id}
-      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{ 
-        this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
+    this.storage.get('user').then(user=>{
+      console.log(user.id)
+      var softskill={"skills":this.softSkillLike,"id":user.id}
+      this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',softskill).subscribe(res=>{ 
         this.storage.set("softskillMajeurs",this.softSkillLike)
+        this.navCtrl.push('ProfilPage');
+
     })
     })
   }

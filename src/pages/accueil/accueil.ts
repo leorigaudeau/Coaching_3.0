@@ -23,7 +23,7 @@ export class AccueilPage {
   isError:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
-  this.isError=false;
+    this.isError=false;
   }
 
   ionViewDidLoad() {
@@ -35,7 +35,16 @@ export class AccueilPage {
     var test={"login":this.username,"password":this.password}
     this.http.post<UserResponse>('https://actincoachapi.appspot.com/login',test).subscribe(res=>{ 
     if(!res.etat){
-      this.storage.set('id', res.id_user);
+      var user={
+        "nom" : res.nom,
+        "prenom" :res.prenom,
+        "logo":res.logo_entreprise,
+        "service":res.service,
+        "id":res.id_user
+      }
+      console.log(res)
+      this.storage.set('user',user);
+
       if (res.nom_role == "collaborateur") {
         this.navCtrl.push('ReglesPage'); 
       } else if(res.nom_role == "coach") {
@@ -60,4 +69,8 @@ interface UserResponse {
   nom_role: string;
   entreprise: string;
   etat:boolean;
+  logo_entreprise : string;
+  nom:string;
+  service : string;
+  prenom:string;
 }

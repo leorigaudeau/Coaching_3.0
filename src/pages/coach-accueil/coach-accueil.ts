@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the CoachAccueilPage page.
@@ -14,25 +16,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'coach-accueil.html',
 })
 export class CoachAccueilPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
   }
 
-  info = {nom:"Mary",prenom:"Marc",desc:"Meilleur Coach 2019"}
+  user={}
   
   GoOnToAllEntreprise(){
     this.navCtrl.push('CoachListeentreprisePage');
   }
-
-  softSkillMineur = [
-    { name: "Logique", note: 1 },
-    { name: "Equipe", note: 2 },
-    { name: "Altruiste", note: 3 }
-  ]
   
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachAccueilPage');
+    this.storage.get('user').then(user=>{
+      this.user=user;
+    })
   }
 
 }
+

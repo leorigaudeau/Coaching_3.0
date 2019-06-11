@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
-  info = {nom:"Moreau",prenom:"Michel",desc:"Meilleur humain 2019"}
+  user={}
   softSkillMajeur=[]
   softSkillMineur=[]
   
@@ -29,6 +29,9 @@ export class ProfilPage {
     })
     this.storage.get('softskillMajeurs').then(softskillMajeurs=>{
       this.softSkillMajeur=softskillMajeurs;
+    })
+    this.storage.get('user').then(user=>{
+      this.user=user;
     })
   }
 
