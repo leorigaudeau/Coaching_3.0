@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
+import { sha256, sha224 } from 'js-sha256';
 
 
 /**
@@ -42,7 +43,6 @@ export class AccueilPage {
         "service":res.service,
         "id":res.id_user
       }
-      console.log(res)
       this.storage.set('user',user);
 
       if (res.nom_role == "collaborateur") {
@@ -50,7 +50,7 @@ export class AccueilPage {
       } else if(res.nom_role == "coach") {
         this.navCtrl.push('CoachAccueilPage');
       }else if(res.nom_role == "entreprise"){
-        this.navCtrl.push('WelcomePage');
+        this.navCtrl.push('EntrepriseAccueilPage');
       }
       res.nom_role
     }else{
@@ -69,7 +69,7 @@ interface UserResponse {
   nom_role: string;
   entreprise: string;
   etat:boolean;
-  logo_entreprise : string;
+  logo_entreprise : string;npm
   nom:string;
   service : string;
   prenom:string;

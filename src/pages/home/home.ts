@@ -54,6 +54,10 @@ export class HomePage {
   GoOnToCOACHAccueil(){
     this.navCtrl.push('CoachAccueilPage');
   }
+
+  GoOnToEntrepriseAccueil(){
+    this.navCtrl.push('EntrepriseAccueilPage');
+  }
   GoOnToCoachListeprofilPage(){
     this.navCtrl.push('CoachListeprofilPage');
   }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
+import { SoftSkill } from '../../bean/SoftSkill';
 
 /**
  * Generated class for the ProfilPage page.
@@ -24,17 +25,24 @@ export class ProfilPage {
   }
 
   ionViewDidLoad() {
-    this.storage.get('softskillMineurs').then(softskillMineurs=>{
-      this.softSkillMineur=softskillMineurs;
-    })
-    this.storage.get('softskillMajeurs').then(softskillMajeurs=>{
-      this.softSkillMajeur=softskillMajeurs;
-    })
     this.storage.get('user').then(user=>{
       this.user=user;
+     let body={"user":user.id};
+     this.http.post<SoftSkill[]>('https://actincoachapi.appspot.com/getSoftSkillsMineur',body).subscribe(res=>{ 
+        this.softSkillMineur=res;
+        console.log(res)
+     })
+
+     this.http.post<SoftSkill[]>('https://actincoachapi.appspot.com/getSoftSkillsMajeur',body).subscribe(res=>{ 
+      this.softSkillMajeur=res;
+      console.log(res)
+
+   })
+
     })
   }
-
-
-
 }
+
+
+
+

@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import {SoftSkill} from '../../bean/SoftSkill'
-import { SoftMajeursPage } from '../soft-majeurs/soft-majeurs';
 
 /**
  * Generated class for the SoftSkillSwipePage page.
@@ -60,12 +59,8 @@ export class SoftSkillSwipePage {
   this.ready = true;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SoftSkillSwipePage');
-  }
 
   like(like) {
-    console.log('like '+this.cardCursor)
     var self = this;
     if (this.attendants.length > 0) {
         self.attendants[this.cardCursor].likeEvent.emit({ like });
@@ -83,7 +78,6 @@ export class SoftSkillSwipePage {
 }
 
   onCardInteract(event,attendant) {
-    console.log('oncard '+this.cardCursor)
     if(event.like){
       this.presentPrompt()
     }else{
@@ -98,7 +92,6 @@ export class SoftSkillSwipePage {
   }
 
   nextCard(){
-    console.log(JSON.stringify(this.softSkillLike))
     if(this.isLastCard()){
       this.navCtrl.push('SoftMineursPage',{like: this.softSkillLike,unlike:this.softSkillUnlike});
     }else{
