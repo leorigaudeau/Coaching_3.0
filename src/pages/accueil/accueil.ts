@@ -41,7 +41,8 @@ export class AccueilPage {
         "prenom" :res.prenom,
         "logo":res.logo_entreprise,
         "service":res.service,
-        "id":res.id_user
+        "id":res.id_user,
+        "id_entreprise":res.id_entreprise,
       }
       this.storage.set('user',user);
 
@@ -52,7 +53,6 @@ export class AccueilPage {
       }else if(res.nom_role == "entreprise"){
         this.navCtrl.push('EntrepriseAccueilPage');
       }
-      res.nom_role
     }else{
       this.isError=true;
     }
@@ -69,8 +69,9 @@ interface UserResponse {
   nom_role: string;
   entreprise: string;
   etat:boolean;
-  logo_entreprise : string;npm
+  logo_entreprise : string;
   nom:string;
   service : string;
   prenom:string;
+  id_entreprise:string;
 }

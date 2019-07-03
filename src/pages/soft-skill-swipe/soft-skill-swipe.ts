@@ -39,7 +39,8 @@ export class SoftSkillSwipePage {
         this.attendants.push({
           nom_softskill:a.nom_softskill,
           id_softskill: a.id_softskill,
-          logo:a.logo,
+          description: a.description,
+          logo:'',
           likeEvent: new EventEmitter(),
           destroyEvent: new EventEmitter(),
       })
@@ -48,6 +49,7 @@ export class SoftSkillSwipePage {
         this.attendants.push({
           nom_softskill:a.nom_softskill,
           id_softskill: a.id_softskill,
+          description: a.description,
           logo:a.logo,
           likeEvent: new EventEmitter(),
           destroyEvent: new EventEmitter(),
@@ -70,7 +72,7 @@ export class SoftSkillSwipePage {
         }else{
           self.attendants[this.cardCursor].note=2;
           var test=self.attendants[this.cardCursor]
-          var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+          var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.description,test.note);
           this.softSkillUnlike.push(softskill);
           this.nextCard();
         }
@@ -109,21 +111,21 @@ export class SoftSkillSwipePage {
            { text: '3', handler: data => {
             var test=this.attendants[this.cardCursor];
             test.note=3
-            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.description,test.note);
             this.softSkillUnlike.push(softskill);
             this.nextCard();
            }},
            { text: '4', handler: data => {
             var test=this.attendants[this.cardCursor];
             test.note=4
-            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.description,test.note);
             this.softSkillLike.push(softskill);
             this.nextCard();
            }},
            { text: '5', handler: data => {
             var test=this.attendants[this.cardCursor];
             test.note=5
-            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.note);
+            var softskill:SoftSkill=new SoftSkill(test.id_softskill,test.logo,test.nom_softskill,test.description,test.note);
             this.softSkillLike.push(softskill);
             this.nextCard();
            }}

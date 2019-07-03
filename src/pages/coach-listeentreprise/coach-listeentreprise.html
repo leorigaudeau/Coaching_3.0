@@ -21,7 +21,7 @@
   <ion-grid class="gridsoftskill">
     <ion-row class="plop">
       <ion-col *ngFor="let element of list" class="gridcol" col-5>
-        <a href="/#/home">
+        <a (click)="GoOnToSuiviCollabEntreprisePage(element.id_entreprise)">
           <ion-row class="titlerowblock">
             <ion-col class="titlecolblock">
               <p class="titlepblock">{{element.nom_entreprise}}</p>

@@ -23,7 +23,6 @@ export class SoftMineursPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient,private storage: Storage) {
     this.softSkillLike=this.navParams.get("like")
     this.softSkillUnlike=this.navParams.get("unlike")
-    console.log(this.softSkillLike)
  }
 
   ionViewDidLoad() {
@@ -42,7 +41,6 @@ export class SoftMineursPage {
 
   nextstep(){
     this.storage.get('user').then(user=>{
-      console.log(user.id)
       var test={"skills":this.softSkillUnlike,"id":user.id}
       this.http.put<UserResponse>('http://actincoachapi.appspot.com/saveSkill',test).subscribe(res=>{
         this.storage.set("softskillMineurs",this.softSkillUnlike) 

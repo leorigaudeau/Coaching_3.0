@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 /**
  * Generated class for the CoachListeentreprisePage page.
  *
@@ -36,8 +35,13 @@ export class CoachListeentreprisePage {
     })
   }
 
-  
+  GoOnToSuiviCollabEntreprisePage(id){
+    let paramObj = { idEntreprise: id };
+    this.navCtrl.push('SuiviCollabEntreprisePage',paramObj);
+  }
+
 }
+
 
 interface ListEntreprise {
   nom_entreprise: string;

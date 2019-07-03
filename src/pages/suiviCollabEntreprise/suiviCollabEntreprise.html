@@ -1,0 +1,73 @@
+<!--
+  Generated template for the GerersoftskillPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>gerersoftskill</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-spinner *ngIf="loading==1" name="lines"></ion-spinner>
+
+    <ion-item *ngIf="loading!=1">
+        <ion-label>Collaborateur Suivi</ion-label>
+        <ion-select (ionChange)='onChangeTime()' [(ngModel)]="idUserSelected">
+          <ion-option *ngFor="let element of listCoached"  [value]="element.id_user">{{element.nom}} {{element.prenom}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-segment *ngIf="idUserSelected!=null" [(ngModel)]="majMin">
+          <ion-segment-button href="#dogs" value="1">
+            <ion-label>Mineur</ion-label>
+          </ion-segment-button>
+          <ion-segment-button href="#cats" value="2">
+            <ion-label>Majeur</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-list [hidden]="majMin!='1'">
+            <ion-item *ngFor="let element of mineur">
+                <ion-avatar item-start>
+                    <img src="../../assets/icon/faqs.png">
+                </ion-avatar>
+                <ion-label>{{element.nom_softskill}}</ion-label>
+                <ion-label>
+                    <div class="casecontent" *ngFor="let index of [1,2,3,4,5]; ">
+                        <div *ngIf="element.note < index; else elseelement">
+                          <div class='casevide'></div>
+                        </div>
+                        <div class="casecontent">
+                          <ng-template #elseelement>
+                            <div class='casenote'></div>
+                          </ng-template>
+                        </div>
+                      </div>
+                </ion-label>
+              </ion-item>          
+        </ion-list>
+        <ion-list [hidden]="majMin!='2'">
+          <ion-item *ngFor="let element of majeur"> 
+              <ion-avatar item-start>
+                  <img src="../../assets/icon/faqs.png">
+              </ion-avatar>
+            <ion-label>{{element.nom_softskill}}</ion-label>
+            <ion-label>
+                <div class="casecontent" *ngFor="let index of [1,2,3,4,5]; ">
+                    <div *ngIf="element.note < index; else elseelement">
+                      <div class='casevide'></div>
+                    </div>
+                    <div class="casecontent">
+                      <ng-template #elseelement>
+                        <div class='casenote'></div>
+                      </ng-template>
+                    </div>
+                  </div>
+            </ion-label>          </ion-item>
+          
+        </ion-list>
+</ion-content>

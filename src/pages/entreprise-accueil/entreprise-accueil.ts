@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the EntrepriseAccueilPage page.
@@ -18,20 +19,25 @@ export class EntrepriseAccueilPage {
 
   pieChartData={};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http:HttpClient) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http:HttpClient,private storage: Storage) {
   }
 
+  user;
+
   ionViewDidLoad() {
-    this.useAngularLibrary();
-    console.log('ionViewDidLoad EntrepriseAccueilPage');
+    this.storage.get('user').then(user=>{
+      this.user=user;
+      this.useAngularLibrary();
+    })
+ 
   }
 
   useAngularLibrary() {
-    console.log(window.innerHeight)
     var dataTable:any[]=[];
     dataTable=[ ['Softskill', '', '', 'Nombre de collaborateur ayant acquis le softskill' ,'Moyenne'],]
-    var body={"entreprise":"04df0dca-fe56-11e8-8eb2-f2801f1b9fd2"}
+    var body={"entreprise":this.user.id_entreprise}
     this.http.post<JsonResponse>('https://actincoachapi.appspot.com/entreprise/getJsonSkill',body).subscribe(res=>{
+    console.log(res);
     var total=0;  
     res.skills.forEach((skill,pos)=>{
         let x=pos%9;
@@ -93,3 +99,5 @@ interface JsonResponse {
   nbr_collaborateur: string;
   skills: NoteResponse[];
 }
+
+

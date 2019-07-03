@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
 import { AccueilPage } from '../accueil/accueil';
-import { ProfilPage } from '../profil/profil';
-import { ReglesPage } from '../regles/regles';
-import { SoftMajeursPage } from '../soft-majeurs/soft-majeurs';
-import { SoftMineursPage } from '../soft-mineurs/soft-mineurs';
-import { SoftSkillSwipePage } from '../soft-skill-swipe/soft-skill-swipe';
 import { NavController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
@@ -68,9 +63,7 @@ export class HomePage {
   GoOnToCoachbienjouer(){
     this.navCtrl.push('FindejeuPage');
   }
-  GoOnTogererSoftSkill(){
-    this.navCtrl.push('GerersoftskillPage');
-  }
+
 
   GoOnTogererUtilisateur(){
     this.navCtrl.push('GererutilisateurPage');

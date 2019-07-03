@@ -17,15 +17,35 @@
 
   <ion-grid>
     <ion-row>
-        <ion-col col-4> <div *ngFor="let element of utilisateur">
-            <p>
-                {{element.name}} 
-            </p>
-            
-        </div>
-      </ion-col>
-        <ion-col><ion-icon name="create"></ion-icon></ion-col>
+        <ion-item>
+            <ion-label>Entreprise</ion-label>
+            <ion-select [(ngModel)]="idEntrepriseSelect">
+              <ion-option *ngFor="let element of listentreprise" [value]="element.id_entreprise">{{element.nom_entreprise}}</ion-option>
+            </ion-select>
+          </ion-item>
+
     </ion-row>
+    <ion-item >
+        <ion-label id="profile_image" color="primary" stacked>Profilbild wählen</ion-label>
+        <ion-input [disabled]="idEntrepriseSelect==null" type="file" accept=".csv" id="upload"  (change)="onFileSelect($event.target)"></ion-input>
+      </ion-item>
+      <ion-item>
+          <div class="row header">
+            <div class="col">Nom</div>
+            <div class="col">Prénom</div>
+            <div class="col">mail</div>
+            <div class="col">login</div>
+            <div class="col">password</div>
+          </div>
+          <div class="row" *ngFor="let data of listNewUserSave">
+            <div class="col">{{data.nom}}</div>
+            <div class="col">{{data.prenom}}</div>
+            <div class="col">{{data.mail}}</div>
+            <div class="col">{{data.login}}</div>
+            <div class="col">{{data.password}}</div>
+          </div>
+      </ion-item>
+  
   </ion-grid>
 
    

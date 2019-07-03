@@ -1,0 +1,24 @@
+.casecontent {
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.casenote {
+    width: 19px;
+    height: 19px;
+    border-radius: 25px;
+    background: color($colors, primary, base);
+    border: 1px solid color($colors, primary, base);
+}
+.casevide {
+    width: 19px;
+    height: 19px;
+    border-radius: 25px;
+    background: color($colors, light, base);
+    border: 1px solid color($colors, primary, base);
+}
+
+ion-segment{
+    padding-bottom: 10px;
+}

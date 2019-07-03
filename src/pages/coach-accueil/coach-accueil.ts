@@ -24,6 +24,10 @@ export class CoachAccueilPage {
   GoOnToAllEntreprise(){
     this.navCtrl.push('CoachListeentreprisePage');
   }
+
+  GoOnUserHandler(){
+    this.navCtrl.push('GererutilisateurPage');
+  }
   
 
   ionViewDidLoad() {
